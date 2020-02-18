@@ -2,7 +2,7 @@
 
 ## Introduction
 
-I love Javascript and want get really good at Data Structures and Algorithms so I decided to create this Github repo as a way to hold myself accountable and as a future reference guide. This repo will contain the space/time complexities, and explanations of the best time to use each of the following algorithms:
+I want to get really good at Data Structures and Algorithms and Javascript is my preferred scripting languages so I decided to create this Github repo as a way to hold myself accountable and as a future reference guide. This repo will contain the space/time complexities, and explanations of the best time to use each of the following algorithms:
 
 - Searching
     - Linear Search
