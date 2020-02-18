@@ -6,7 +6,7 @@ I want to get really good at Data Structures and Algorithms and Javascript is my
 
 - Searching
     - Linear Search
-    - Binary Search
+    - Binary Search [x]
     - Naive String Search
 
 - Sorting
