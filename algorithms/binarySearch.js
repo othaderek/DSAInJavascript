@@ -20,14 +20,27 @@ Space Complexity -> O(1)
 */
 
 const binarySearch = (sortedArray, n) => {
+    // First index
     let left = 0
+    // Last index
     let right = sortedArray.length - 1
+    // The middle will always be the first plus last index divided by two, rounded down
+    // This will return an index
     let middle = Math.floor((left + right)/2)
+    // While the element in the middle index is not equal to the number we are looking for
+    // AND the left index is less than or equal to right index
     while (sortedArray[middle] !== n && left <= right){
+        // If n is less than the element in the middle index slot, we move the right pointer
+        // to be one index to the left of the cirrent middle index value
         if (n < sortedArray[middle]) right = middle - 1;
+        // otherwise we change the left pointer to be one index to right of the middle index
         else left = middle + 1;
+        // At the end of the loop we set a new middle based on the control strucutre above
         middle = Math.floor((left + right)/2)
     }
+    // When the while loop breaks it will run this ternary
+    // If the middle element in the sorted array is equal to n, return middle (index)
+    // else return -1
     console.log((sortedArray[middle] === n ? middle : -1));
     return sortedArray[middle] === n ? middle : -1;
 }
