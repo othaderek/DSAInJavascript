@@ -31,7 +31,39 @@ We then, for every iteration, plug the element in the array into the frequency c
 Once we reach the end of the array we return the element map, which will return the values we iterated through in each key of the object and the values of those keys will hold the frequency that the element was counted.
 
 ## Multiple Pointers
+This pattern involves having 2 pointers, generally a 'left' and a 'right' pointer that iterate through an array and perhaps compare, or combine the values at the left and right pointer position, and depending on some or of logic, increment or decrement one or the other pointer until some sort of condition is met.
+
+Here is an example we can give with a problem called 'Two Sum'
+
+Given a sorted array, and a target number, return the indeces of the two numbers such that they add up to the given target.
+
+```
+const twoSum = (array, target) => {
+    let left = 0;
+    let right = array.length - 1;
+
+    while (left < right){
+        let sum = array[left] + array[right]
+        if (sum === target){
+            return [array[left], array[right]]
+        } else if (sum > target){
+            right--
+        } else {
+            left++
+        }
+    }
+}
+
+twoSum([1,2,3,4,5], 5) // => [0,3]
+```
+Here we set a left pointer to the 0 index and a right pointer to the array.length - 1 index, this will always be the last index in an array for any given array. 
+Next we create a while loop that runs until left is greater than right or the sum matches the target. We accomplish this by setting the sum of the current iteration to the sum variable and use a control strucutre to check if the sum matches the target, if the sum doesn't match the target then we check the next condition which checks if the sum is greater than the target, if it is greater than the target then decrement the right pointer, else increment the left pointer.
+
 
 ## Sliding Window
 
 ## Divide and Conquer
+
+
+
+
