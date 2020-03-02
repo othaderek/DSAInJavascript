@@ -62,6 +62,31 @@ Next we create a while loop that runs until left is greater than right or the su
 
 ## Sliding Window
 
+The sliding window pattern is pretty much what it sounds like. A small window is formed over a portion of some data and this window can slide over the data to capture different portions of it. 
+
+Here is an example
+
+Given an array and a subarray length, return the maximum subarray sum.
+
+```
+const maxSubarraySum = (array, num) => {
+    let maxSum = 0;
+    let tempSum = 0;
+
+    if (arr.length < num) return null;
+
+    for (let i = 0; i < num; i++){
+        maxSum += array[i]
+    }
+    tempSum = maxSum;
+    for (let i = num; i < array.length; i++){
+        tempSum = tempSum - array[i - num] + arr[i];
+        maxSum = Math.max(maxSum, tempSum);
+    }
+    return maxSum;
+}
+```
+
 ## Divide and Conquer
 
 
