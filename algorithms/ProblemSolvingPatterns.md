@@ -102,5 +102,24 @@ Divide and Conquer is the process of taking a problem, breaking the problem up i
 
 A pretty good example of using the divide and conquer methodology is implementing Binary Search.
 
-Here is a link to my implementation of Binary Search in Javascript.
+```
+const binarySearch = (sortedArray, n) => {
+    let left = 0
+    let right = sortedArray.length - 1
+    let middle = Math.floor((left + right)/2)
+    
+    while (sortedArray[middle] !== n && left <= right){
+
+        if (n < sortedArray[middle]) right = middle - 1;
+
+        else left = middle + 1;
+
+        middle = Math.floor((left + right)/2)
+    }
+    return sortedArray[middle] === n ? middle : -1;
+}
+```
+
+
+Here is a link to repo with my implementation of Binary Search in Javascript.
 [Binary Search](https://github.com/othaderek/DSAInJavascript/blob/master/algorithms/binarySearch.js "Binary Search")
