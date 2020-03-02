@@ -70,22 +70,31 @@ Given an array and a subarray length, return the maximum subarray sum.
 
 ```
 const maxSubarraySum = (array, num) => {
+    if (array.length < num) return null;
+
     let maxSum = 0;
     let tempSum = 0;
-
-    if (arr.length < num) return null;
 
     for (let i = 0; i < num; i++){
         maxSum += array[i]
     }
     tempSum = maxSum;
     for (let i = num; i < array.length; i++){
-        tempSum = tempSum - array[i - num] + arr[i];
+        tempSum = tempSum - array[i - num] + array[i];
         maxSum = Math.max(maxSum, tempSum);
     }
     return maxSum;
 }
 ```
+First we check to see if the num passed in as an argument that represent the sub-array length is greater than the array length. If it is, we return null.
+
+Next we create two variables, a maxSum and tempSum. The tempSum variable is going to hold the value of the maxSum so that we can mutate it by doing some operation on it and then compare it to the original maxSum value, but we will get to that later.
+
+After setting the variables to zero, we create a for loop that sums every number in that sub-array and save it to maxSum.
+
+We set tempSum to maxSum and start our next for loop.
+This for loop sets the first iteration (i) to num, num represent the sub-array length. 
+tempSum = array[i - num] + array[i] will in essence subtract the previous first element in the sub-array and add the new last element of the sub-array and compare the maxSum with the newly evaluated temp sum. It will then set the new maxSum to which ever value is greater and when we finish looping it will return the max sub-array sum!
 
 ## Divide and Conquer
 
