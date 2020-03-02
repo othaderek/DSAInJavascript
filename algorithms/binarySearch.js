@@ -35,7 +35,7 @@ const binarySearch = (sortedArray, n) => {
         if (n < sortedArray[middle]) right = middle - 1;
         // otherwise we change the left pointer to be one index to right of the middle index
         else left = middle + 1;
-        // At the end of the loop we set a new middle based on the control strucutre above
+        // At the end of the loop we set a new middle based on the control structure above
         middle = Math.floor((left + right)/2)
     }
     // When the while loop breaks it will run this ternary
