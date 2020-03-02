@@ -98,6 +98,9 @@ tempSum = array[i - num] + array[i] will in essence subtract the previous first 
 
 ## Divide and Conquer
 
+Divide and Conquer is the process of taking a problem, breaking the problem up into smaller parts that are easier to solve and then putting the solutions for each problem together.
 
+A pretty good example of using the divide and conquer methodology is implementing Binary Search.
 
-
+Here is a link to my implementation of Binary Search in Javascript.
+[Binary Search](https://github.com/othaderek/DSAInJavascript/blob/master/algorithms/binarySearch.js "Binary Search")
