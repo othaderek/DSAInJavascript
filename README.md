@@ -19,7 +19,7 @@ I want to get really good at Data Structures and Algorithms and Javascript is my
     - [x] Bubble Sort 
     - [ ] Selection Sort 
     - [ ] Insertion Sort  
-    - [ ] Merge Sort 
+    - [x] Merge Sort 
     - [ ] Quick Sort 
     - [ ] Radix Sort 
 
