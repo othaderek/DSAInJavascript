@@ -15,9 +15,14 @@
 
 // I'm goin to break each line down one by one.
 
+// First thing we want to do is break this up into two functions.
+// This is the merge function and it takes 2 arrays.
+// It compares elements from each array and adds the lowest value into the sorted
+// array until each element is in the sortedArray and the last line returns that array
+
 const merge = (arr1, arr2) => {
-    let sortedArray = [];
-    let i = 0;
+    let sortedArray = []; //Where the sorted array values go
+    let i = 0; // i is the pointer on the first array and j the second
     let j = 0;
     while (i < arr1.length && j < arr2.length){
         if (arr1[i] < arr2[j]){
