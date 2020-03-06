@@ -25,8 +25,10 @@ I want to get really good at Data Structures and Algorithms and Javascript is my
 
 and the implementation of the following data structures:
 
-- [ ] Singly/Doubly Linked Lists  
-- [ ] Stacks && Queues 
+- [ ] Singly Linked Lists
+- [ ] Doubly Linked Lists  
+- [ ] Stacks
+- [ ] Queues 
 - [ ] Binary Search Trees && Tree Traversal 
 - [ ] Binary Heaps 
 - [ ] Hash Tables 
