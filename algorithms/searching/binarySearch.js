@@ -14,7 +14,7 @@ reset the middle position to the new middle between left and right pointers
 If the middle value is too large, more the left pointer in the the middle position and
 reset the middle position to the new middle between left and right pointers.
 
-Time Complexity -> Worst Case: O(log n) Best Case: O(1)
+Time Complexity -> O(log(n))
 Space Complexity -> O(1)
 
 */
@@ -32,20 +32,22 @@ const binarySearch = (sortedArray, n) => {
     while (sortedArray[middle] !== n && left <= right){
         // If n is less than the element in the middle index slot, we move the right pointer
         // to be one index to the left of the cirrent middle index value
+        console.log(sortedArray[middle]);
         if (n < sortedArray[middle]) right = middle - 1;
         // otherwise we change the left pointer to be one index to right of the middle index
         else left = middle + 1;
         // At the end of the loop we set a new middle based on the control structure above
         middle = Math.floor((left + right)/2)
+        
     }
     // When the while loop breaks it will run this ternary
     // If the middle element in the sorted array is equal to n, return middle (index)
     // else return -1
-    console.log((sortedArray[middle] === n ? middle : -1));
+    // console.log((sortedArray[middle] === n ? middle : -1));
     return sortedArray[middle] === n ? middle : -1;
 }
 
-binarySearch([1,2,3,4,5,6], 5)
+binarySearch([1,2,3,4,5,6,8,10], 10)
 binarySearch([-13,-10,-1,0,1,2,3,4,5,6], -10)
 binarySearch([0,1,2,3,4,5,6], 0)
 binarySearch([0,1,2,3,4,5,6], "r")
