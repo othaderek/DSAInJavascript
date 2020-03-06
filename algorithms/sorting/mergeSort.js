@@ -13,6 +13,8 @@
 // compared. The array is broken all the way down to arrays of length 1 or 0 and then
 // compared and merged.
 
+// Time complexity: O(n log n)
+
 // I'm goin to break each line down one by one.
 
 // First thing we want to do is break this up into two functions.
