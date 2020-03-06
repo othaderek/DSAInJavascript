@@ -24,7 +24,8 @@ const merge = (arr1, arr2) => {
     let sortedArray = []; //Where the sorted array values go
     let i = 0; // i is the pointer on the first array and j the second
     let j = 0;
-    while (i < arr1.length && j < arr2.length){
+    //This lopp iterates through both arrays and always puts the smallest value being compared in the sortedArray
+    while (i < arr1.length && j < arr2.length){ 
         if (arr1[i] < arr2[j]){
             sortedArray.push(arr1[i])
             console.log(sortedArray);
@@ -35,7 +36,7 @@ const merge = (arr1, arr2) => {
             j++
         }
     }
-
+    // The next two while loops add whatever is left over into the sortedArray
     while (i < arr1.length){
         sortedArray.push(arr1[i]);
         i++
@@ -45,17 +46,22 @@ const merge = (arr1, arr2) => {
         sortedArray.push(arr2[j])
         j++
     }
-
+    // We return the sortedArray
     return sortedArray
 }
 
+// This is the merge sort function that calls mergeSort
+// recursively and merges the sorted arrays
 const mergeSort = (array) => {
-
+    // Base case. Returns arrays of size 0 or 1
     if (array.length <= 1) return array;
-
+    // We get the half length and create two slices
     let halfLength = Math.ceil(array.length/2);
+    // This represents the first half, or left
     let leftArray = mergeSort(array.slice(0, halfLength));
+    // and second half or right
     let rightArray = mergeSort(array.slice(halfLength));
+    // we pass whatever the mergeSort function returns into our merge method
     return merge(leftArray, rightArray)
 }
 
