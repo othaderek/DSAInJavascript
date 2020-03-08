@@ -14,6 +14,8 @@ I want to get really good at Data Structures and Algorithms and Javascript is my
     - [ ] Linear Search 
     - [x] Binary Search 
     - [ ] Naive String Search 
+    - [ ] Depth First Search
+    - [ ] Breadth First Search
 
 - Sorting
     - [x] Bubble Sort 
@@ -29,7 +31,7 @@ and the implementation of the following data structures:
 - [ ] Doubly Linked Lists  
 - [ ] Stacks
 - [ ] Queues 
-- [ ] Binary Search Trees && Tree Traversal 
+- [ ] Binary Search Trees
 - [ ] Binary Heaps 
 - [ ] Hash Tables 
 - [ ] Graphs && Graph Traversal 
