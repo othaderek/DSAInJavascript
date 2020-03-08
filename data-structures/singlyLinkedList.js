@@ -41,6 +41,30 @@ class SinglyLinkedList{
         this.length++
         return this
     }
+    // Base case we check if there is a head and if there isn't return undefined
+    // With pop we have to traverse the linked list until node.next is null
+    // then we take the previous node and set that as the tail, set the previous nodes
+    // next to null. The we decrement the SLL.
+    // Last thing we want to do is check if the linked list length is equal to zero
+    // If it is we set the head and the tail to null
+    // Very last thing we do is return current
+    pop(){
+        if (!this.head) return undefined;
+        let current = this.head;
+        let newTail = current;
+        while (current.next){
+            newTail = current
+            current = current.next
+        }
+        this.tail = newTail;
+        this.tail.next = null;
+        this.length--;
+        if (this.length === 0){
+            this.tail = null;
+            this.head = null;
+        }
+        return current;
+    }
 
 }
 
@@ -48,3 +72,5 @@ let sLL = new SinglyLinkedList()
 console.log(sLL.push(1));
 console.log(sLL.push(2));
 console.log(sLL.push(3));
+console.log(sLL.pop());
+console.log(sLL.tail);
