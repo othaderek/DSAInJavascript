@@ -80,6 +80,22 @@ class SinglyLinkedList{
         }
         return shifted;
     }
+    // With unshift we create a new node, set the current head to be the next value of 
+    // the newly created node and then set the newly created node as the head of SLL.
+    // Remember our base case. if there is no head that means there is no tail and 
+    // we set them both to the newNode.
+    unshift(value){
+        let newNode = new Node(value);
+        if (!this.head){
+            this.head = newNode;
+            this.tail = newNode;
+        } else {
+            newNode.next = this.head;
+            this.head = newNode;
+        }
+        this.length++
+        return this
+    }
 
 }
 
@@ -88,6 +104,6 @@ console.log(sLL.push(1));
 console.log(sLL.push(2));
 console.log(sLL.push(3));
 console.log(sLL.push(4));
-console.log(sLL.push(3));
-console.log(sLL.shift());
+console.log(sLL.unshift(0));
+
 
