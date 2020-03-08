@@ -65,6 +65,21 @@ class SinglyLinkedList{
         }
         return current;
     }
+    // With shift we are removing from the beginning of the SLL
+    // We have the same basecase from before
+    // We set the head of the SLL to a variable and then set the head.next value
+    // to this.head, next we decrement and then return the shifted value
+    // Additionally, if we get a length of zero we can set the tail to null
+    shift(){
+        if (!this.head) return undefined;
+        let shifted = this.head;
+        this.head = shifted.next
+        this.length-- 
+        if (this.length === 0){
+            this.tail = null;
+        }
+        return shifted;
+    }
 
 }
 
@@ -72,5 +87,7 @@ let sLL = new SinglyLinkedList()
 console.log(sLL.push(1));
 console.log(sLL.push(2));
 console.log(sLL.push(3));
-console.log(sLL.pop());
-console.log(sLL.tail);
+console.log(sLL.push(4));
+console.log(sLL.push(3));
+console.log(sLL.shift());
+
