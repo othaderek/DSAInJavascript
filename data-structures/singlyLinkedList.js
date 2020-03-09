@@ -120,6 +120,13 @@ class SinglyLinkedList{
 
     }
 
+    insert(value, index){
+        if (index < 0 || index > this.length) return false;
+        if (index === this.length) return this.push(val);
+        if (index === 0) return this.unshift(val);
+
+    }
+
 }
 
 let sLL = new SinglyLinkedList()
