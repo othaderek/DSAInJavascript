@@ -108,7 +108,7 @@ class SinglyLinkedList{
         }
         return current
     }
-    // Here we use our get method to find the specific inded we want to set
+    // Here we use our get method to find the specific index we want to set
     // We grab the node and change its value and return true otherwise false
     set(value, index){
         let foundNode = this.get(index);
@@ -122,9 +122,14 @@ class SinglyLinkedList{
 
     insert(value, index){
         if (index < 0 || index > this.length) return false;
-        if (index === this.length) return this.push(val);
-        if (index === 0) return this.unshift(val);
-
+        if (index === this.length) return this.push(value);
+        if (index === 0) return this.unshift(value);
+        let newNode = new Node(value);
+        let previous = this.get(index - 1)
+        newNode.next = previous.next
+        previous.next = newNode
+        this.length++
+        return true
     }
 
 }
@@ -134,9 +139,9 @@ console.log(sLL.push(1));
 console.log(sLL.push(2));
 console.log(sLL.push(3));
 console.log(sLL.push(4));
-// console.log(sLL.unshift(0));
 console.log(sLL.get(3));
 console.log(sLL.set(1,1));
+console.log(sLL.insert(100, 1));
 console.log(sLL);
 
 
