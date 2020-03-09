@@ -96,6 +96,29 @@ class SinglyLinkedList{
         this.length++
         return this
     }
+    // Get is a method that takes and index and returns the node at that index
+    // Base case is checking to see if index is less than zero or greater than length
+    get(index){
+        if (index < 0 || index >= this.length) return null
+        let counter = 0;
+        let current = this.head
+        while (counter != index){
+            current = current.next
+            counter++
+        }
+        return current
+    }
+    // Here we use our get method to find the specific inded we want to set
+    // We grab the node and change its value and return true otherwise false
+    set(value, index){
+        let foundNode = this.get(index);
+        if (foundNode){
+            foundNode.value = value
+            return true
+        }
+        return false
+
+    }
 
 }
 
@@ -104,6 +127,10 @@ console.log(sLL.push(1));
 console.log(sLL.push(2));
 console.log(sLL.push(3));
 console.log(sLL.push(4));
-console.log(sLL.unshift(0));
+// console.log(sLL.unshift(0));
+console.log(sLL.get(3));
+console.log(sLL.set(1,1));
+console.log(sLL);
+
 
 
