@@ -119,7 +119,17 @@ class SinglyLinkedList{
         return false
 
     }
-
+    // With insert, given a value and index, we want to add the value to the index provided. 
+    // This will involve us checking the linked list length as a base case and returning false
+    // additionally we will return false if the given index is less than zero
+    // After this we want to check is equal to the length of the linked list length
+    // if it is we will use the push method which just adds the value to the end
+    // If the given index is equal to zero then we will use unshift which adds the value to the start
+    // If its none of those cases then we create a node and use the get method to get the node before
+    // the index provided. Doing this is important because we want to set that node's next value to equal
+    // the newly created node. But before we over right the previous node's next value we must set it's next
+    // value to the new node's next value. After we do this we can overwrite its next value to be that of
+    //  the new node. Lastly, we increment up one on the linked list's length and return true.
     insert(value, index){
         if (index < 0 || index > this.length) return false;
         if (index === this.length) return this.push(value);
@@ -132,6 +142,21 @@ class SinglyLinkedList{
         return true
     }
 
+    remove(index){
+        if (index < 0 || index > this.length) return undefined;
+        if (index === this.length - 1) this.pop();
+        if (index === 0) this.shift();
+        let beforeNode = this.get(index - 1)
+        let removed = this.get(index)
+        beforeNode.next = removed.next;
+        this.length--
+        return removed
+    }
+
+    reverse(){
+
+    }
+
 }
 
 let sLL = new SinglyLinkedList()
@@ -139,10 +164,14 @@ console.log(sLL.push(1));
 console.log(sLL.push(2));
 console.log(sLL.push(3));
 console.log(sLL.push(4));
-console.log(sLL.get(3));
 console.log(sLL.set(1,1));
 console.log(sLL.insert(100, 1));
+console.log(sLL.get(2));
 console.log(sLL);
+console.log(sLL.remove(2));
+console.log(sLL);
+
+
 
 
 
