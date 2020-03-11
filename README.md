@@ -27,7 +27,7 @@ I want to get really good at Data Structures and Algorithms and Javascript is my
 
 and the implementation of the following data structures:
 
-- [ ] Singly Linked Lists
+- [x] Singly Linked Lists
 - [ ] Doubly Linked Lists  
 - [ ] Stacks
 - [ ] Queues 
