@@ -153,6 +153,17 @@ class SinglyLinkedList{
         return removed
     }
 
+    print(){
+        let arr = []
+        let current = this.head
+        
+        while (current){
+            arr.push(current.value)
+            current = current.next
+        }
+        return arr
+    }
+
     reverse(){
 
     }
@@ -169,7 +180,7 @@ console.log(sLL.insert(100, 1));
 console.log(sLL.get(2));
 console.log(sLL);
 console.log(sLL.remove(2));
-console.log(sLL);
+console.log(sLL.print());
 
 
 
