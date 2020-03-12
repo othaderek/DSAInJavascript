@@ -29,10 +29,19 @@ class DoublyLinkedList{
         return this
     }
 
-    
+    pop(){
+        if (!this.head) return false
+        let popped = this.tail
+        this.tail = this.tail.prev
+        this.tail.next = null
+        return popped
+    }
 }
 
 let dLL = new DoublyLinkedList()
 console.log(dLL.push(1));
 console.log(dLL.push(2));
 console.log(dLL.push(3));
+console.log(dLL.pop());
+console.log(dLL.tail);
+
