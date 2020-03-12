@@ -31,9 +31,17 @@ class DoublyLinkedList{
 
     pop(){
         if (!this.head) return false
+        if (this.length === 1){
+            let node = this.head
+            this.head = null
+            this.tail = null
+            this.length--
+            return node
+        }
         let popped = this.tail
         this.tail = this.tail.prev
         this.tail.next = null
+        this.length--
         return popped
     }
 }
@@ -43,5 +51,7 @@ console.log(dLL.push(1));
 console.log(dLL.push(2));
 console.log(dLL.push(3));
 console.log(dLL.pop());
+console.log(dLL);
+
 console.log(dLL.tail);
 
