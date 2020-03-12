@@ -51,13 +51,12 @@ class DoublyLinkedList{
         if (this.length === 1){
             this.head = null
             this.tail = null
-            this.length--
-            return shifted
         } else {
             this.head = shifted.next
-            this.length--
-            return shifted
+            this.head.prev = null
         }
+        this.length--
+        return shifted
     }
 }
 
@@ -67,6 +66,4 @@ console.log(dLL.push(2));
 console.log(dLL.push(3));
 console.log(dLL.shift());
 console.log(dLL);
-
-console.log(dLL.tail);
 
