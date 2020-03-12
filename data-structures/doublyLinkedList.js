@@ -44,13 +44,28 @@ class DoublyLinkedList{
         this.length--
         return popped
     }
+
+    shift(){
+        if (!this.head) return false
+        let shifted = this.head
+        if (this.length === 1){
+            this.head = null
+            this.tail = null
+            this.length--
+            return shifted
+        } else {
+            this.head = shifted.next
+            this.length--
+            return shifted
+        }
+    }
 }
 
 let dLL = new DoublyLinkedList()
 console.log(dLL.push(1));
 console.log(dLL.push(2));
 console.log(dLL.push(3));
-console.log(dLL.pop());
+console.log(dLL.shift());
 console.log(dLL);
 
 console.log(dLL.tail);
