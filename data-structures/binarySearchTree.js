@@ -1,3 +1,14 @@
+// Binary Search Tree
+// A Binary Search Tree is a tree data structure with the following characteristics
+// Like other trees, it has a root, branches, and leaves
+// The root is the starting node or parent of all of the other nodes
+// The left subtree (nodes to the left of the root node) only contain values less
+// than the root node. Conversely, nodes in the right subtree (nodes to the right of root node)
+// Only contiain nodes with values greater than the root node.
+// This works this way as you work your way down the tree.
+// For any given node, its left value will always be lesser and right value will
+// always be greater.
+
 class Node{
     constructor(value){
         this.value = value
