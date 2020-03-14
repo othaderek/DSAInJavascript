@@ -30,7 +30,7 @@ and the implementation of the following data structures:
 - [x] Singly Linked Lists
 - [x] Doubly Linked Lists  
 - [x] Stacks
-- [ ] Queues 
+- [x] Queues 
 - [ ] Binary Search Trees
 - [ ] Binary Heaps 
 - [ ] Hash Tables 
