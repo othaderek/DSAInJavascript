@@ -9,6 +9,7 @@
 // For any given node, its left value will always be lesser and right value will
 // always be greater.
 
+// Similar to Doubly Linked Lists
 class Node{
     constructor(value){
         this.value = value
