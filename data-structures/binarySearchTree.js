@@ -9,7 +9,8 @@
 // For any given node, its left value will always be lesser and right value will
 // always be greater.
 
-// Similar to Doubly Linked Lists
+// Similar to Doubly Linked Lists you have a Left, Right, and value, as opposed to a
+// next, previous and value in the Node.
 class Node{
     constructor(value){
         this.value = value
@@ -46,6 +47,10 @@ class BinarySearchTree{
                 currentNode = currentNode.right
             }
         }
+    }
+
+    find(value){
+        
     }
 }
 
