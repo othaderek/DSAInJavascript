@@ -60,3 +60,4 @@ console.log(bst.insert(10));
 console.log(bst.insert(3));
 console.log(bst.insert(39));
 console.log(bst.insert(9));
+console.log(bst.find(9));
