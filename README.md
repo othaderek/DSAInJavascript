@@ -31,7 +31,7 @@ and the implementation of the following data structures:
 - [x] Doubly Linked Lists  
 - [x] Stacks
 - [x] Queues 
-- [ ] Binary Search Trees
+- [x] Binary Search Trees
 - [ ] Binary Heaps 
 - [ ] Hash Tables 
 - [ ] Graphs && Graph Traversal 
