@@ -71,8 +71,10 @@ class BinarySearchTree{
         let data = [];
         let queue = [];
         let node = this.root;
+        // Enqueue
         queue.push(this.root);
         while(queue.length){
+            // Dequeue
             node = queue.shift()
             data.push(node.value);
             if (node.left) queue.push(node.left);
