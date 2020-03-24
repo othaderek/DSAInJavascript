@@ -15,7 +15,7 @@ I want to get really good at Data Structures and Algorithms and Javascript is my
     - [x] Binary Search 
     - [ ] Naive String Search 
     - [ ] Depth First Search
-    - [ ] Breadth First Search
+    - [x] Breadth First Search
 
 - Sorting
     - [x] Bubble Sort 
