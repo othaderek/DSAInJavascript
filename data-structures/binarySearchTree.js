@@ -23,7 +23,7 @@ class BinarySearchTree{
     constructor(){
         this.root = null
     }
-
+    // Time Complexity: O(log n)
     insert(value){
         let newNode = new Node(value)
         if (this.root === null){
@@ -48,7 +48,8 @@ class BinarySearchTree{
             }
         }
     }
-
+    
+    // Time Complexity: O(log n)
     find(value){
         if (!this.root) return false;
         let currentNode = this.root
