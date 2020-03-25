@@ -1,16 +1,30 @@
-// Binary Search Tree
-// A Binary Search Tree is a tree data structure with the following characteristics
-// Like other trees, it has a root, branches, and leaves
-// The root is the starting node or parent of all of the other nodes
-// The left subtree (nodes to the left of the root node) only contain values less
-// than the root node. Conversely, nodes in the right subtree (nodes to the right of root node)
-// Only contiain nodes with values greater than the root node.
-// This works this way as you work your way down the tree.
-// For any given node, its left value will always be lesser and right value will
-// always be greater.
+/*
+Binary Search Tree
+A Binary Search Tree is a tree data structure with the following characteristics
+Like other trees, it has a root, branches, and leaves
+The root is the starting node or parent of all of the other nodes
+The left subtree (nodes to the left of the root node) only contain values less
+than the root node. Conversely, nodes in the right subtree (nodes to the right of root node)
+Only contiain nodes with values greater than the root node.
+This works this way as you work your way down the tree.
+For any given node, its left value will always be lesser and right value will
+always be greater.
 
-// Similar to Doubly Linked Lists you have a Left, Right, and value, as opposed to a
-// next, previous and value in the Node.
+Similar to Doubly Linked Lists you have a Left, Right, and value, as opposed to a
+next, previous and value in the Node.
+
+Breadth First Search vs Depth First Search
+When to use BFS
+When space complexity isn't an issue
+
+When to use DFS
+In Order: When you want the nodes in order
+Pre Order: To export a tree strucutre so that it is easily reconstructed
+or copied.
+
+*/
+
+
 class Node{
     constructor(value){
         this.value = value
@@ -132,4 +146,5 @@ console.log("Found: ", bst.find(5));
 console.log(bst.BFS()); //  => [ 10, 6, 15, 3, 20, 5 ]
 console.log(bst.DFSPreOrder()); 
 console.log(bst.DFSPostOrder()); 
+console.log(bst.DFSInOrder()); 
 
