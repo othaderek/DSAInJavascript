@@ -14,9 +14,10 @@ I want to get really good at Data Structures and Algorithms and Javascript is my
     - [ ] Linear Search 
     - [x] Binary Search 
     - [ ] Naive String Search 
-    - [x] Depth First Search
+    - [ ] Depth First Search
         - [x] Pre Order
         - [x] Post Order
+        - [ ] In Order
     - [x] Breadth First Search
 
 - Sorting
