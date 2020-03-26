@@ -38,6 +38,7 @@ and the implementation of the following data structures:
 - [ ] Binary Heaps 
 - [ ] Hash Tables 
 - [ ] Graphs && Graph Traversal 
+    - [ ] Adjacency List
 - [ ] Djikstra's Algorithm 
 
 Enjoy!
