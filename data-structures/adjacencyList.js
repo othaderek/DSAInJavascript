@@ -26,21 +26,32 @@ class Graph {
         for(let edge of this.adjacencyList[vertex]) this.removeEdge(vertex, edge);
         delete this.adjacencyList[vertex]
       }
+
+      DFSRecursive(){
+          const result = [];
+          const visited = {};
+          const dfs = ((vertex) => {
+            if (!vertex) return null;
+        })(start);
+      }
 }
 
 let g = new Graph();
 
-g.addVertex('name');
-g.addVertex('age');
-g.addVertex('life');
-g.addVertex('cat');
-g.addEdge('name', 'life');
-g.addEdge('name', 'age');
-g.addEdge('name', 'cat');
-console.log(g);
-console.log(g.removeVertex('name'));
- 
-console.log(g.adjacencyList);
+g.addVertex('A')
+g.addVertex('B')
+g.addVertex('C')
+g.addVertex('D')
+g.addVertex('E')
+g.addVertex('F')
+
+g.addEdge('A','B')
+g.addEdge('A','C')
+g.addEdge('B','D')
+g.addEdge('C','E')
+g.addEdge('D','E')
+g.addEdge('D','F')
+g.addEdge('E','F')
 
 
 
