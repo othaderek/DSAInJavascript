@@ -13,7 +13,7 @@ const hashStringToInt = (s, tableSize) => {
 
 class HashTable{
 
-    table = new Array(117)
+    table = new Array(1999) // Should be a large prime because it elps spread out keys
 
     getItem = key => {
         const idx = hashStringToInt(key, this.table.length)
@@ -22,6 +22,11 @@ class HashTable{
 
     setItem = (key, value) => {
         const idx = hashStringToInt(key, this.table.length);
+        if (this.table[idx]){
+            this.table.push([key, value]);
+        } else {
+            this.table[idx] = [[key, value]]
+        }
         console.log(idx);
         this.table[idx] = value;
     }
@@ -32,4 +37,5 @@ let hash = new HashTable();
 hash.setItem("firstName", "Otha");
 hash.setItem("lastName", "Hernandez");
 console.log(hash.getItem("firstName"))
+console.log(hash.getItem("lastName"))
 console.log(hash.table);
