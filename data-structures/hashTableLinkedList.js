@@ -41,12 +41,13 @@ const stringToHash = (s, tableLength) => {
     for (let i = 0; i < s.length; i++){
         hash = (13 * hash * s.charCodeAt(i)) % tableLength;
     }
+    console.log(hash);
     return hash;
 }
   
   
 class HashTable {
-    table = new Array(1999);
+    table = new Array(313);
     numItems = 0;
     loadFactor = this.numItems / this.table.length;
   
