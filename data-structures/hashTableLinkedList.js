@@ -47,7 +47,8 @@ const stringToHash = (s, tableLength) => {
   
 class HashTable {
     table = new Array(1999);
-    size = this.table.size;
+    numItems = 0;
+    loadFactor = this.numItems / this.table.length;
   
     populateTable = () => {
       for (let i = 0; i < this.table.length; i++){
@@ -60,6 +61,8 @@ class HashTable {
     // console.log(stringToHash(key, this.table.length));
     // produce hash index
     // get ll at hash index and push new node onto lls
+    let idx = stringToHash(key, this.table.length);
+    this.table[idx].push(key, value);
     }
   
     getItem = (key, value) => {
@@ -72,4 +75,5 @@ class HashTable {
 let h1 = new HashTable();
 h1.populateTable();
 h1.setItem("firstName", "Otha");
+h1.setItem("lastName", "Hernandez");
 console.log(h1.table);
