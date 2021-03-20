@@ -47,6 +47,30 @@ const binarySearch = (sortedArray, n) => {
     return sortedArray[middle] === n ? middle : -1;
 }
 
+// clearer implementation
+const binarySearch = (arr, t) => {
+    let l = 0;
+    let r = arr.length-1;
+    let m;
+    let step = 0
+    while (l <= r){
+      step++
+      m = Math.floor((l+r)/2);
+      console.log(`Step:${step} l: ${l}, r:${r}, m:${m}`)
+      if (arr[m] === target) return m;
+      if (t < arr[m]){
+        r = m - 1;
+      } else{
+        l = m + 1;
+      }
+    }
+    if (arr[m] === t){
+      return m;
+    } else {
+      return "Not Found"
+    }
+  }
+
 binarySearch([1,2,3,4,5,6,8,10], 10)
 binarySearch([-13,-10,-1,0,1,2,3,4,5,6], -10)
 binarySearch([0,1,2,3,4,5,6], 0)
