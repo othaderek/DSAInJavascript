@@ -91,7 +91,7 @@ class BinarySearchTree{
             // Dequeue
             node = queue.shift()
             data.push(node.value);
-            if (node.left) queue.push(node.left);      console.log(current)
+            if (node.left) queue.push(node.left);
             if (node.right) queue.push(node.right);
         }
         return data;
